@@ -173,7 +173,7 @@ function checkTargetCollision(ball) {
 		if(targets_h_match) {
 			for(var ti in targets_h_match) {
 				var target = targets_h_match[ti];
-				if(ball.left>=target.left && ball.left<=target.right || ball.right>=target.left && ball.right<=target.right) {
+				if(ball.left>=target.left-1 && ball.left<=target.right+1 || ball.right>=target.left-1 && ball.right<=target.right+1) {
 					// Check corners - we must be offset by at least one of the coordinates - otherwise it's ball's corner
 					var delta = Math.abs((hsign>0? target.top : target.bottom) - effective_y) 
 						+ Math.abs((vsign>0? target.left : target.right) - effective_x);
@@ -191,7 +191,7 @@ function checkTargetCollision(ball) {
 		if(targets_v_match) {
 			for(var tvi in targets_v_match) {
 				var targetv = targets_v_match[tvi];
-				if(ball.top>=targetv.top && ball.top<=targetv.bottom || ball.bottom>=targetv.top && ball.bottom<=targetv.bottom) {
+				if(ball.top>=targetv.top-1 && ball.top<=targetv.bottom+1 || ball.bottom>=targetv.top-1 && ball.bottom<=targetv.bottom+1) {
 					// Check corners - we must be offset by at least one of the coordinates - otherwise it's ball's corner
 					var deltav = Math.abs((hsign>0? targetv.top : targetv.bottom) - effective_y)
 						+ Math.abs((vsign>0? targetv.left : targetv.right) - effective_x);
