@@ -5,7 +5,7 @@ var total_width = 900;
 var ball_width = ball_height = 8;
 var ball_corner_check_offset = 0; // 1;
 var player_default_left = 400;
-var player_top = 600;
+var player_top = 650;
 var player_default_width = 100;
 var player_min_width = 30;
 var player_height = 50;
@@ -33,7 +33,7 @@ var player_background_pos = $(".footer_mask").css("background-position");
 $("#vid").val("1"); sel_vid_gol();
 $("#header, .head_gol, #menu_gol, #zal_frack + div, #00, #01, #10, #footer, #zal_frack").fadeOut().remove();
 $("#PlsqlBody").width(total_width+"px");
-$(".main, #PlsqlBody").css("margin-left", left_margin+"px").css("height", player_top+player_height+"px").css("background-color", "#F9F9FF");
+$(".main").css("margin-left", left_margin+"px").css("padding", "0px").css("height", player_top+player_height+"px").css("background-color", "#F9F9FF");
 $("#page").css("background-color", "grey");
 $("ul.karta_zal").each(function() { 
 	this.style.position = "absolute";
@@ -54,7 +54,7 @@ $("#11 li").each(function(){
 		var prop = coord_props[i];
 		elem[prop] = parseInt($(elem).css(prop));
 		if(prop==="top") {
-			elem[prop]=elem[prop]-60;
+			elem[prop]=elem[prop]-30;
 		}
 //		$(elem).css(prop, elem[prop]);
 		elem.style[prop] = elem[prop]+"px";
