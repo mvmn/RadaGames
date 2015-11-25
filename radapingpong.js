@@ -155,7 +155,7 @@ function checkTargetCollision(ball) {
 //	var vsign = ball.vspeed>0? 1 : -1;
 	var	x = ball.left;
 	var y = ball.top;
-	var xt =x + ball.hspeed;
+	var xt = x + ball.hspeed;
 	var yt = y + ball.vspeed;
 	var hsign = xt>x? 1 : -1; 
 	var vsign = yt>y? 1 : -1;
@@ -164,7 +164,7 @@ function checkTargetCollision(ball) {
 	ball.bottom = y + ball.height;
 	
 	var odd = false;
-	while(x!=xt && y!=yt) {		
+	while(x!=xt || y!=yt) {		
 		var effective_x = x + (hsign>0? ball.width : 0);
 		var effective_y = y + (vsign>0? ball.height : 0);
 
