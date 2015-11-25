@@ -32,7 +32,7 @@ var player_background_pos = $(".footer_mask").css("background-position");
 
 $("#vid").val("1"); sel_vid_gol();
 $("#header, .head_gol, #menu_gol, #zal_frack + div, #00, #01, #10, #footer, #zal_frack").fadeOut().remove();
-$("#PlsqlBody").width(total_width+"px");
+$("#PlsqlBody, .main").width(total_width+"px");
 $(".main").css("margin-left", left_margin+"px").css("padding", "0px").css("height", player_top+player_height+"px").css("background-color", "#F9F9FF");
 $("#page").css("background-color", "grey");
 $("ul.karta_zal").each(function() { 
@@ -407,10 +407,10 @@ var invincibility = false;
 function setInvincibility() {
 	setTimeout(function() {
 		invincibility = false;
-		$(".main, #PlsqlBody").css("border-bottom", "none");
+		$(".main").css("border-bottom", "none");
 	}, 10000);
 	invincibility = true;
-	$(".main, #PlsqlBody").css("border-bottom", "solid 2px black");
+	$(".main").css("border-bottom", "solid 2px black");
 }
 
 var powerupDisabled = false;
