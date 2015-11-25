@@ -426,7 +426,7 @@ function randomPowerup(ball) {
 			showMessage(ball.left, ball.top, "Powerball!");
 		} else if(choice>=90 && choice<95) {
 			changeBatWidth(-8, 15000);
-			showMessage(ball.left, ball.top, "Bad luck - bat shrinks for 10 sec :-(");
+			showMessage(ball.left, ball.top, "Bad luck - bat shrinks for 15 sec :-(");
 		} else if(choice>=95) {
 			createBall(ball.left, ball.top);
 			showMessage(ball.left, ball.top, "Extra ball!");
